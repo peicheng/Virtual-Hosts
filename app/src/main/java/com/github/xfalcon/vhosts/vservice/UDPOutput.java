@@ -43,7 +43,7 @@ public class UDPOutput implements Runnable
     private StringBuilder stringBuild;
 
 
-    private static final int MAX_CACHE_SIZE = 50;
+    private static final int MAX_CACHE_SIZE = 10000;
     private LRUCache<String, DatagramChannel> channelCache =
             new LRUCache<>(MAX_CACHE_SIZE, new LRUCache.CleanupCallback<String, DatagramChannel>()
             {
