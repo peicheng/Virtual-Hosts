@@ -18,12 +18,13 @@ jobs:
       with:
         java-version: '11'
         distribution: 'zulu'
-        # cache: gradle
+        cache: gradle
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build --debug
+      run: ./gradlew build
+      # run: ./gradlew build --debug
       
     - uses: actions/upload-artifact@v4
       with:
