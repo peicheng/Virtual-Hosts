@@ -2,7 +2,7 @@ name: Android CI
 
 on:
   push:
-    branches: [ "f-droid-test" ]
+    branches: [ "f-droid-test-25000-1" ]
   pull_request:
     branches: [ "main" ]
 
