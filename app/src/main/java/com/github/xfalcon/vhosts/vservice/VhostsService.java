@@ -114,7 +114,7 @@ public class VhostsService extends VpnService {
             networkToDeviceQueue = new ConcurrentLinkedQueue<>();
             udpSelectorLock = new ReentrantLock();
             tcpSelectorLock = new ReentrantLock();
-            executorService = Executors.newFixedThreadPool(20);
+            executorService = Executors.newFixedThreadPool(30);
             executorService.submit(new UDPInput(networkToDeviceQueue, udpSelector, udpSelectorLock));
             executorService.submit(new UDPOutput(deviceToNetworkUDPQueue, networkToDeviceQueue, udpSelector, udpSelectorLock, this));
             executorService.submit(new TCPInput(networkToDeviceQueue, tcpSelector, tcpSelectorLock));
