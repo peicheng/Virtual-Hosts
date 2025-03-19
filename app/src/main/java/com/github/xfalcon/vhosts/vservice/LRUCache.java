@@ -25,8 +25,8 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V>
 
     public LRUCache(int maxSize, CleanupCallback callback)
     {
-        super(25000 + 1, 1, true);
-        maxSize = 25000;
+        super(50000 + 1, 1, true);
+        maxSize = 50000;
         this.maxSize = maxSize;
         this.callback = callback;
     }
